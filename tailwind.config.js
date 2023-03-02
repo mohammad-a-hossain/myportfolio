@@ -1,0 +1,47 @@
+
+
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode:'class',
+  theme: {
+    fontFamily:{
+      'kaushan':['Kaushan Script']
+      
+    },
+    boxShadow: {
+      "custom-light": " 0 0 10px #313131",
+      "custom-dark": "5px 5px 10px #0a0c0e",
+    },  
+    extend: {
+      colors:{
+        green:{
+          DEFAULT:'#f1f1f1'
+        },
+        dark:{
+          DEFAULT: '#010101',
+          100: '#0a0b0e',
+          200: '#16181D',
+          //?FIX this
+          300: '#16181D',
+          500: '#0f1115',
+          700: '#202125',
+        },
+      }
+    },
+  },
+  variants: {
+    extend: {
+      boxShadow: ["dark"],
+    },
+  },
+  plugins: [],
+}
